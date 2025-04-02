@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.example.hazelcast.DualConnectionTest" time="9.592" tests="3" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="23"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/home/sid/projects/ssl-hazlecase/hazelcast-security-module/target/test-classes:/home/sid/projects/ssl-hazlecase/hazelcast-security-module/target/classes:/home/sid/.m2/repository/com/hazelcast/hazelcast/5.3.6/hazelcast-5.3.6.jar:/home/sid/.m2/repository/com/google/inject/guice/5.1.0/guice-5.1.0.jar:/home/sid/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar:/home/sid/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar:/home/sid/.m2/repository/com/google/guava/guava/30.1-jre/guava-30.1-jre.jar:/home/sid/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/home/sid/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/home/sid/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/home/sid/.m2/repository/org/checkerframework/checker-qual/3.5.0/checker-qual-3.5.0.jar:/home/sid/.m2/repository/com/google/errorprone/error_prone_annotations/2.3.4/error_prone_annotations-2.3.4.jar:/home/sid/.m2/repository/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3.jar:/home/sid/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/home/sid/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
+    <property name="java.vm.vendor" value="Eclipse Adoptium"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://adoptium.net/"/>
+    <property name="os.name" value="Linux"/>
+    <property name="java.vm.specification.version" value="23"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="/home/sid/.vscode-server/data/User/globalStorage/pleiades.java-extension-pack-jdk/java/latest/lib"/>
+    <property name="sun.java.command" value="/home/sid/projects/ssl-hazlecase/hazelcast-security-module/target/surefire/surefirebooter16447788367013876451.jar /home/sid/projects/ssl-hazlecase/hazelcast-security-module/target/surefire 2025-04-02T08-53-12_381-jvmRun1 surefire9859331420157424127tmp surefire_010338603804306576683tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/home/sid/projects/ssl-hazlecase/hazelcast-security-module/target/test-classes:/home/sid/projects/ssl-hazlecase/hazelcast-security-module/target/classes:/home/sid/.m2/repository/com/hazelcast/hazelcast/5.3.6/hazelcast-5.3.6.jar:/home/sid/.m2/repository/com/google/inject/guice/5.1.0/guice-5.1.0.jar:/home/sid/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar:/home/sid/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar:/home/sid/.m2/repository/com/google/guava/guava/30.1-jre/guava-30.1-jre.jar:/home/sid/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/home/sid/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/home/sid/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/home/sid/.m2/repository/org/checkerframework/checker-qual/3.5.0/checker-qual-3.5.0.jar:/home/sid/.m2/repository/com/google/errorprone/error_prone_annotations/2.3.4/error_prone_annotations-2.3.4.jar:/home/sid/.m2/repository/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3.jar:/home/sid/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/home/sid/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/sid"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2025-01-21"/>
+    <property name="java.home" value="/home/sid/.vscode-server/data/User/globalStorage/pleiades.java-extension-pack-jdk/java/latest"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/home/sid/projects/ssl-hazlecase/hazelcast-security-module"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="surefire.real.class.path" value="/home/sid/projects/ssl-hazlecase/hazelcast-security-module/target/surefire/surefirebooter16447788367013876451.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="23.0.2+7"/>
+    <property name="user.name" value="sid"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="5.15.167.4-microsoft-standard-WSL2"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Temurin-23.0.2+7"/>
+    <property name="localRepository" value="/home/sid/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="23.0.2"/>
+    <property name="user.dir" value="/home/sid/projects/ssl-hazlecase/hazelcast-security-module"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Eclipse Adoptium"/>
+    <property name="java.vm.version" value="23.0.2+7"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="67.0"/>
+  </properties>
+  <testcase name="testSSLConnectionIfAvailable" classname="com.example.hazelcast.DualConnectionTest" time="3.244"/>
+  <testcase name="testPlainConnectionWorks" classname="com.example.hazelcast.DualConnectionTest" time="3.153"/>
+  <testcase name="testDataSharingIfBothAvailable" classname="com.example.hazelcast.DualConnectionTest" time="3.195"/>
+</testsuite>

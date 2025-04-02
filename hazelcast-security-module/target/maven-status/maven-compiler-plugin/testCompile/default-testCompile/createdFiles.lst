@@ -1,0 +1,5 @@
+com/example/hazelcast/util/KeyStoreGenerator.class
+com/example/hazelcast/config/TestConfigModule.class
+com/example/hazelcast/DualConnectionTest.class
+com/example/hazelcast/util/NodeExtensionMethodFinder.class
+com/example/hazelcast/SSLConnectionTest.class

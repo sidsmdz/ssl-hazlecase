@@ -10,8 +10,7 @@ import java.nio.file.Paths;
 import java.util.Scanner;
 
 /**
- * Hazelcast client that connects with SSL/TLS enabled using JVM system properties
- * Compatible with Hazelcast Open Source Edition
+ * Hazelcast client that connects with SSL/TLS to port 5702
  */
 public class SSLClient {
     
@@ -34,14 +33,14 @@ public class SSLClient {
         System.setProperty("javax.net.ssl.trustStore", clientKeystore.toAbsolutePath().toString());
         System.setProperty("javax.net.ssl.trustStorePassword", "password");
         
-        // Enable SSL for Hazelcast client (OSS approach)
+        // Enable SSL for Hazelcast client
         System.setProperty("hazelcast.client.ssl.enabled", "true");
         
-        // Create a basic client config (without SSLConfig)
+        // Create a basic client config 
         ClientConfig clientConfig = new ClientConfig();
-        clientConfig.getNetworkConfig().addAddress("localhost:5701");
+        clientConfig.getNetworkConfig().addAddress("localhost:5702"); // Connect to SSL port
         
-        System.out.println("Connecting to Hazelcast server with SSL via JVM system properties...");
+        System.out.println("Connecting to Hazelcast server with SSL via port 5702...");
         
         // Create client instance
         HazelcastInstance client = HazelcastClient.newHazelcastClient(clientConfig);

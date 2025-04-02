@@ -7,14 +7,14 @@ import com.hazelcast.core.HazelcastInstance;
 import java.util.Scanner;
 
 /**
- * Simple Hazelcast client that connects without SSL/TLS
+ * Simple Hazelcast client that connects without SSL/TLS on port 5701
  */
 public class NonSSLClient {
     
     public static void main(String[] args) {
         // Create a basic client config
         ClientConfig clientConfig = new ClientConfig();
-        clientConfig.getNetworkConfig().addAddress("localhost:5701");
+        clientConfig.getNetworkConfig().addAddress("localhost:5701");  // Connect to non-SSL port
         
         // Set any SSL properties to null/false to ensure non-SSL connection
         System.clearProperty("javax.net.ssl.keyStore");
@@ -23,7 +23,7 @@ public class NonSSLClient {
         System.clearProperty("javax.net.ssl.trustStorePassword");
         System.setProperty("hazelcast.client.ssl.enabled", "false");
         
-        System.out.println("Connecting to Hazelcast server without SSL...");
+        System.out.println("Connecting to Hazelcast server without SSL via port 5701...");
         
         // Create client instance
         HazelcastInstance client = HazelcastClient.newHazelcastClient(clientConfig);

@@ -1,25 +1,29 @@
 package com.example.hazelcast.extension;
 
-import com.example.hazelcast.config.StaticInjectorHolder;
 import com.google.inject.Injector;
+
 import java.util.Properties;
 
 /**
- * Static provider for SSL properties used by NodeExtension
+ * Provider for SSL Properties that can be accessed from the security module
  */
 public class SSLPropertiesProvider {
+    private static Injector injector;
     
     /**
-     * Sets the Guice injector to use
+     * Sets the injector provided by the main module
      */
-    public static void setInjector(Injector injector) {
-        StaticInjectorHolder.setInjector(injector);
+    public static void setInjector(Injector injectorInstance) {
+        injector = injectorInstance;
     }
     
     /**
-     * Gets SSL Properties from Guice
+     * Gets the SSL properties from the injector
      */
     public static Properties getSSLProperties() {
-        return StaticInjectorHolder.getInjector().getInstance(Properties.class);
+        if (injector == null) {
+            throw new IllegalStateException("Injector not initialized. Call setInjector first.");
+        }
+        return injector.getInstance(Properties.class);
     }
 }

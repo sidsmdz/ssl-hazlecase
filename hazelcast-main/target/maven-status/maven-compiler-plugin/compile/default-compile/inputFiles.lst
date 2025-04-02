@@ -1,3 +1,6 @@
+/home/sid/projects/ssl-hazlecase/hazelcast-main/src/main/java/com/example/hazelcast/client/ClientMember.java
+/home/sid/projects/ssl-hazlecase/hazelcast-main/src/main/java/com/example/hazelcast/client/SSLClient.java
 /home/sid/projects/ssl-hazlecase/hazelcast-main/src/main/java/com/example/hazelcast/server/ServerMember.java
 /home/sid/projects/ssl-hazlecase/hazelcast-main/src/main/java/com/example/hazelcast/client/ClientModule.java
+/home/sid/projects/ssl-hazlecase/hazelcast-main/src/main/java/com/example/hazelcast/client/NonSSLClient.java
 /home/sid/projects/ssl-hazlecase/hazelcast-main/src/main/java/com/example/hazelcast/client/Client.java

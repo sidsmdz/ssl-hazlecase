@@ -1,0 +1,6 @@
+com/example/hazelcast/client/SSLClient.class
+com/example/hazelcast/client/Client.class
+com/example/hazelcast/server/ServerMember.class
+com/example/hazelcast/client/ClientMember.class
+com/example/hazelcast/client/NonSSLClient.class
+com/example/hazelcast/client/ClientModule.class

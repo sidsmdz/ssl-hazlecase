@@ -1,6 +1,7 @@
 package com.example.hazelcast;
 
 import com.example.hazelcast.config.HazelcastConfigModule;
+import com.example.hazelcast.config.StaticInjectorHolder;
 import com.example.hazelcast.extension.SSLContextFactoryProvider;
 import com.example.hazelcast.extension.SSLPropertiesProvider;
 import com.google.inject.Guice;
@@ -15,8 +16,6 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
 import java.net.URL;
 import java.util.Properties;
 
@@ -53,7 +52,7 @@ public class SSLConnectionTest {
                 int exitCode = process.waitFor();
                 
                 if (exitCode != 0) {
-                    throw new IOException("Failed to generate keystores, exit code: " + exitCode);
+                    throw new RuntimeException("Failed to generate keystores, exit code: " + exitCode);
                 }
                 
                 System.out.println("Certificates generated successfully!");
@@ -64,10 +63,10 @@ public class SSLConnectionTest {
                 
                 // If still null, fail
                 if (clientKeystore == null || serverKeystore == null) {
-                    throw new IOException("Keystores still not found after generation attempt. Check script paths.");
+                    throw new RuntimeException("Keystores still not found after generation attempt. Check script paths.");
                 }
             } else {
-                throw new IOException("Keystore files not found and script not found at " + scriptPath);
+                throw new RuntimeException("Keystore files not found and script not found at " + scriptPath);
             }
         }
         
@@ -88,6 +87,7 @@ public class SSLConnectionTest {
         injector = Guice.createInjector(new HazelcastConfigModule());
         
         // Set the injector in provider classes
+        StaticInjectorHolder.setInjector(injector);
         SSLPropertiesProvider.setInjector(injector);
         SSLContextFactoryProvider.setInjector(injector);
         
@@ -98,7 +98,7 @@ public class SSLConnectionTest {
         Config config = injector.getInstance(Config.class);
         server = Hazelcast.newHazelcastInstance(config);
         
-        // Configure client
+        // Configure client with SSL
         ClientConfig clientConfig = new ClientConfig();
         clientConfig.getNetworkConfig().addAddress("localhost:5701");
         
@@ -107,8 +107,6 @@ public class SSLConnectionTest {
         System.setProperty("javax.net.ssl.keyStorePassword", "password");
         System.setProperty("javax.net.ssl.trustStore", clientKeystorePath);
         System.setProperty("javax.net.ssl.trustStorePassword", "password");
-        
-        // Enable SSL for client
         System.setProperty("hazelcast.client.ssl.enabled", "true");
         
         // Create client

@@ -1,0 +1,6 @@
+com/example/hazelcast/extension/CustomNodeExtension.class
+com/example/hazelcast/config/HazelcastConfigModule.class
+com/example/hazelcast/extension/SSLContextFactoryProvider.class
+com/example/hazelcast/config/StaticInjectorHolder.class
+com/example/hazelcast/extension/SSLPropertiesProvider.class
+com/example/hazelcast/extension/CustomSSLContextFactory.class
